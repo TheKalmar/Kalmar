@@ -1,0 +1,4 @@
+endpoint_group: payments
+endpoints:
+  - create_payment
+  - get_payment_status

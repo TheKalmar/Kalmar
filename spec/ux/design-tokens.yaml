@@ -1,0 +1,15 @@
+colors:
+  primary: "#0060C3"
+  background: "#FFFFFF"
+  text: "#111111"
+
+typography:
+  font_family: Inter
+
+spacing:
+  scale: 8
+
+principles:
+  - trust_first
+  - minimal_friction
+  - mobile_first

@@ -1,0 +1,13 @@
+screen_id: payment-success
+purpose: confirm_successful_payment
+
+elements:
+  - success_state
+  - amount
+  - merchant_name
+  - reference_id
+  - done_action
+
+states:
+  - success
+  - delayed_confirmation

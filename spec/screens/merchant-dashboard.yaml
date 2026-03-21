@@ -1,0 +1,15 @@
+screen_id: merchant-dashboard
+purpose: merchant_transaction_visibility
+
+elements:
+  - summary_cards
+  - recent_transactions
+  - status_filters
+  - search
+  - payment_actions
+
+states:
+  - empty
+  - loading
+  - populated
+  - error

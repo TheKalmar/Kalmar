@@ -1,0 +1,12 @@
+screen_id:
+purpose:
+
+elements:
+  - 
+
+states:
+  - loading
+  - error
+
+constraints:
+  mobile_first: true

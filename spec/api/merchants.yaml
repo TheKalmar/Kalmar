@@ -1,0 +1,5 @@
+endpoint_group: merchants
+endpoints:
+  - create_merchant
+  - get_merchant
+  - update_merchant

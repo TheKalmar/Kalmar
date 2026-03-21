@@ -1,0 +1,11 @@
+payment_page:
+  title: "Pay securely"
+  primary_action: "Continue"
+
+payment_success:
+  title: "Payment successful"
+  action_done: "Done"
+
+payment_failed:
+  title: "Payment failed"
+  action_retry: "Try again"

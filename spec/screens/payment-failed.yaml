@@ -1,0 +1,13 @@
+screen_id: payment-failed
+purpose: explain_failure_and_offer_next_action
+
+elements:
+  - failure_title
+  - failure_reason
+  - retry_action
+  - support_action
+
+states:
+  - generic_fail
+  - timeout
+  - session_expired

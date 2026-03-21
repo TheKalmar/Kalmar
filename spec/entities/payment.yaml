@@ -1,0 +1,8 @@
+entity: Payment
+fields:
+  - id
+  - merchant_id
+  - amount
+  - status
+  - payment_method
+  - reference_id

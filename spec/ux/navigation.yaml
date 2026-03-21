@@ -1,0 +1,5 @@
+primary_navigation:
+  - dashboard
+  - transactions
+  - qr
+  - settings

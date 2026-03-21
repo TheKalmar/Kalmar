@@ -1,0 +1,15 @@
+flow_id: merchant-onboarding
+actor: merchant
+
+steps:
+  - start_onboarding
+  - enter_company_information
+  - enter_bank_information
+  - review_submission
+  - submit
+  - show_status
+
+edge_cases:
+  - missing_required_fields
+  - validation_failed
+  - duplicate_merchant

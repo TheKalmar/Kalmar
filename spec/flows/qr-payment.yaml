@@ -1,0 +1,16 @@
+flow_id: qr-payment
+actor: customer
+
+steps:
+  - scan_qr
+  - open_payment_page
+  - review_merchant_and_amount
+  - select_payment_method
+  - confirm_payment
+  - show_result
+
+edge_cases:
+  - invalid_qr
+  - session_expired
+  - payment_failed
+  - user_closed_page

@@ -1,0 +1,19 @@
+screen_id: payment-page
+purpose: complete_payment
+
+elements:
+  - merchant_name
+  - amount
+  - payment_methods
+  - primary_action
+  - trust_text
+
+states:
+  - loading
+  - ready
+  - error
+
+constraints:
+  mobile_first: true
+  login_required: false
+  trust_visible: true

@@ -1,0 +1,15 @@
+screen_id: onboarding-company-info
+purpose: collect_company_data
+
+elements:
+  - legal_company_name
+  - address
+  - jib
+  - mbs
+  - representative
+  - contact_email
+
+states:
+  - empty
+  - validation_errors
+  - saved

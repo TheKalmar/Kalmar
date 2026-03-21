@@ -1,0 +1,18 @@
+name: kalmar
+type: payment_platform
+
+description: QR-based payment platform for merchants and customers.
+
+platforms:
+  - web
+  - mobile
+
+mvp_features:
+  - qr_payment
+  - merchant_onboarding
+  - merchant_dashboard
+
+non_goals_v1:
+  - refunds
+  - loyalty
+  - advanced_analytics

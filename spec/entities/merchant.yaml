@@ -1,0 +1,8 @@
+entity: Merchant
+fields:
+  - id
+  - legal_name
+  - jib
+  - mbs
+  - representative
+  - contact_email
