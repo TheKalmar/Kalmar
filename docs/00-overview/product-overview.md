@@ -1,11 +1,11 @@
-# KalmarPay – Product Overview
+# kalmar – Product Overview
 
-## What is KalmarPay
+## What is kalmar
 
-KalmarPay je QR + NFC payment platforma koja omogućava trgovcima da primaju uplate putem:
+kalmar je QR + NFC payment platforma koja omogućava trgovcima da primaju uplate putem:
 
-- A2A (account-to-account)
 - kartičnog plaćanja (IPG)
+- internog kredita (balance / gift credit)
 
 Plaćanje se može pokrenuti na više načina:
 
@@ -37,7 +37,9 @@ Customer može ući u payment flow na tri načina:
 Nakon ulaska u flow:
 
 - vidi merchant name i amount
-- bira način plaćanja (A2A ili kartica)
+- bira način plaćanja:
+  - kartica
+  - balance / gift credit (ako postoji)
 - potvrđuje plaćanje
 - dobija jasan rezultat (success ili fail)
 
@@ -53,12 +55,12 @@ Merchant:
 ### Merchant (trgovac)
 - mali i srednji biznisi
 - žele brzu naplatu bez komplikacija
-- žele smanjiti troškove (posebno kartične provizije)
+- žele smanjiti troškove
 - žele jednostavan onboarding
 
 ### Customer (kupac)
 - želi brzo platiti bez komplikacija
-- ne želi obaveznu registraciju
+- ne želi obaveznu registraciju (gdje god je moguće)
 - mora imati jasan osjećaj sigurnosti
 - mora jasno vidjeti iznos i kome plaća
 
@@ -67,8 +69,8 @@ Merchant:
 ## Key Value Proposition
 
 ### Za merchant-a
-- niži troškovi (A2A kao primarni kanal)
 - naplata putem QR i NFC bez POS uređaja
+- niži troškovi kroz alternativne modele plaćanja
 - jednostavno generisanje payment session-a
 - jasan pregled uplata
 
@@ -76,7 +78,31 @@ Merchant:
 - brzo plaćanje (scan ili tap)
 - nema nepotrebnih koraka
 - jasan i razumljiv flow
-- visok nivo povjerenja
+- mogućnost korištenja postojećeg kredita (balance)
+
+---
+
+## Payment Methods (MVP)
+
+U MVP fazi podržavamo:
+
+### 1. Kartično plaćanje
+- standardni IPG flow
+- jednokratna uplata
+
+### 2. Balance / Gift Credit
+Interni kredit koji korisnik može koristiti za plaćanje.
+
+Balance se može dopuniti na dva načina:
+
+- kartičnim plaćanjem (top-up)
+- uplatom putem:
+  - mobilnog bankarstva
+  - uplatnice / naloga u banci
+
+Napomena:
+
+Balance / gift credit je korisnički razumljiv koncept (kredit/sredstva), dok tehnička implementacija i bankarski tokovi nisu izloženi korisniku.
 
 ---
 
@@ -89,7 +115,7 @@ Merchant:
 
 ### Payments
 - public payment page (web)
-- izbor metode plaćanja (A2A / kartica)
+- izbor metode plaćanja (kartica / balance)
 - success ekran
 - fail ekran
 
@@ -98,12 +124,16 @@ Merchant:
 - osnovni dashboard
 - pregled transakcija
 
+### Balance (basic)
+- prikaz dostupnog kredita (ako postoji)
+- osnovni top-up flow (kartica + uplata)
+
 ---
 
 ## Out of Scope (NOT in MVP)
 
 - refund mehanizam
-- loyalty / nagrade
+- loyalty / nagrade (van osnovnog balance koncepta)
 - advanced analytics
 - multi-user roles i permissions
 - kompleksni reporting
@@ -113,7 +143,7 @@ Merchant:
 ## UX Principles
 
 - maksimalno 2–3 koraka do plaćanja
-- nema login-a za customer-a
+- nema login-a za customer-a (gdje je moguće)
 - mobile-first pristup
 - isti UX bez obzira na ulaz:
   - QR
@@ -128,13 +158,24 @@ Merchant:
 
 ---
 
+## UX Terminology Rules
+
+- ne koristiti tehničke termine (npr. A2A, tokenizacija)
+- koristiti jednostavne izraze:
+  - "Plati karticom"
+  - "Koristi kredit" 
+- izbjegavati sve što može zbuniti korisnika
+- terminologija mora biti konzistentna kroz cijeli proizvod
+
+---
+
 ## Payment Entry Points
 
 User može ući u flow na tri načina:
 
 1. QR scan
 2. NFC tap
-3. Direct payment link
+3. Direct payment link (merchant share link)
 
 Nakon ulaska, iskustvo mora biti identično.
 
@@ -150,7 +191,7 @@ Nakon ulaska, iskustvo mora biti identično.
   - success
   - failed
 - integracija sa bankom / IPG za kartice
-- A2A kao preferirani kanal gdje je moguće
+- balance sistem vodi interno stanje korisničkog kredita
 
 ---
 
@@ -159,4 +200,7 @@ Nakon ulaska, iskustvo mora biti identično.
 - merchant može kreirati payment i naplatiti
 - customer može završiti plaćanje bez konfuzije
 - UX je dovoljno jasan bez dodatnog objašnjenja
+- podržana su oba načina:
+  - kartica
+  - balance
 - flow radi stabilno bez blokera
